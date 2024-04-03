@@ -66,6 +66,7 @@ OpenHab is an automation tool that connects to things (devices) and runs custom 
 
 ### Steps to Integrate the Virtual Thing with OpenHab 
 
+To be updated
 
 ## Problems with the Current Solutions
 
