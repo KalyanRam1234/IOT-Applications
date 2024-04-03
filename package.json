@@ -1,0 +1,18 @@
+{
+  "name": "re-iot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@node-wot/binding-http": "^0.8.12",
+    "@node-wot/core": "^0.8.12",
+    "express": "^4.18.3",
+    "uuid": "^9.0.1",
+    "webthing": "^0.15.0"
+  }
+}
