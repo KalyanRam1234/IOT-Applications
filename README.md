@@ -60,3 +60,20 @@ The above article describes 2 projects **Mozilla WebThings** and the **Eclipse p
  
 ## Experimentation 
 
+To test out WOT, we created several virtual things using the webThings library and connected the things to openHab (https://www.openhab.org/).
+
+OpenHab is an automation tool that connects to things (devices) and runs custom automation code written by the user. To start out with openHab and setup the code, checkout the following tutorial - https://www.openhab.org/docs/tutorial/
+
+### Steps to Integrate the Virtual Thing with OpenHab 
+
+
+## Problems with the Current Solutions
+
+Most of the solutions focus on connecting devices that use different frameworks to a single unified framework and its majorly for the properties of the device. To perform automation, we need to write multiple if - else statements to cover all the scenarios that are possible. This is a cumbersome and inefficient process and it also doesn't take into account the environment in which the devices are setup. To tackle this problem, people have started to look into integrating AI with IOT to create an AI Planner.
+
+The AI Planner takes the data from the device and the actions it can perform, and returns a sequence of actions that should be performed to reach a desirable state.
+
+Some AI Planner papers - 
+
+  - AI Planning-Based Service Modeling for the Internet of Things By Quentin Bahers -  https://uu.diva-portal.org/smash/get/diva2:792338/FULLTEXT01.pdf
+  - Collaborative Decision Making in IoT Network forSustainable Smart Cities: An Artificial Intelligence Planning Method Based Solution - https://www.warse.org/IJATCSE/static/pdf/file/ijatcse041042021.pdf
