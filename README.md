@@ -65,9 +65,16 @@ To test out WOT, we created several virtual things using the webThings library a
 OpenHab is an automation tool that connects to things (devices) and runs custom automation code written by the user. To start out with openHab and setup the code, checkout the following tutorial - https://www.openhab.org/docs/tutorial/
 
 ### Steps to Integrate the Virtual Thing with OpenHab 
-
-To be updated
-
+- Install openHab to the local system and ensure that the zulu-17 jvm is installed.
+- Clone this repository and move to the Experimentation folder in the terminal.
+- Run **node SmartRoom.js** . This will start the virtual thing and can be checked by opening a browser and searching **http://localhost:8891**.
+- On a browser open the url **http://localhost:8080**. This will open the openhab application.
+- Go to Settings/Things and press the **plus button**, ensure that the **WebThing Binding** is installed from the add-on section. Then search for the virtual thing on openhab and connect it to the interface.
+- Go to each thing and link the properties.
+- Go to the Pages section and create a new layout and add all the properties linked previously to the layout. This will allow to view all the things at the same time (dashboard).
+- Navigate to the Scripts page and create a new script that will be a cron job, i.e it will run a loop that will query the things at every second and check the values of the things and run some actions based on the conditions specified by the user.
+- Run the script, then move to the layouts page to see the changes based on the conditions specified in the script.
+  
 ## Problems with the Current Solutions
 
 Most of the solutions focus on connecting devices that use different frameworks to a single unified framework and its majorly for the properties of the device. To perform automation, we need to write multiple if - else statements to cover all the scenarios that are possible. This is a cumbersome and inefficient process and it also doesn't take into account the environment in which the devices are setup. To tackle this problem, people have started to look into integrating AI with IOT to create an AI Planner.
