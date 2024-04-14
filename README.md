@@ -72,8 +72,12 @@ OpenHab is an automation tool that connects to things (devices) and runs custom 
 - Go to Settings/Things and press the **plus button**, ensure that the **WebThing Binding** is installed from the add-on section. Then search for the virtual thing on openhab and connect it to the interface.
 - Go to each thing and link the properties.
 - Go to the Pages section and create a new layout and add all the properties linked previously to the layout. This will allow to view all the things at the same time (dashboard).
-- Navigate to the Scripts page and create a new script that will be a cron job, i.e it will run a loop that will query the things at every second and check the values of the things and run some actions based on the conditions specified by the user.
+
+![alt text](https://github.com/KalyanRam1234/IOT-Applications/blob/main/SmartRoom_Layout.png)
+- Navigate to the Scripts page and create a new script that will be a cron job, i.e it will run a loop that will query the things at every second and check the values of the things and run some actions based on the conditions specified by the user. The script is created using the blockly tool of openhab (https://www.openhab.org/docs/configuration/blockly/)
 - Run the script, then move to the layouts page to see the changes based on the conditions specified in the script.
+
+![alt text](https://github.com/KalyanRam1234/IOT-Applications/blob/main/Script_Openhab.png)
   
 ## Problems with the Current Solutions
 
