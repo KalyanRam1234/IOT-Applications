@@ -2,10 +2,10 @@
 
 This repository looks into the work that has been done in the IOT community, problems with the current solutions and also looks into the implementation aspect of the frameworks developed.
 
-## Frameworks and Data Formats
+## Standards and Data Formats
 The ppts in the repository gives a brief description and key attractors of the work done by different organizations. The primary focus the organisations is to provide methods that allows to connect the IOT devices to the internet. Some of the organisations focus on providing solutions that are interoperable, i.e support data of various devices that have different data formats.
 
-### Frameworks 
+### Standards
 
 - CoAP (Constrained Application Protocol) - https://datatracker.ietf.org/doc/html/rfc7252
 - IPSO (Internet Protocol of Smart Objects) - https://omaspecworks.org/develop-with-oma-specworks/ipso-smart-objects/
