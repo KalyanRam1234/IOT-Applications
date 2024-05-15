@@ -83,9 +83,32 @@ OpenHab is an automation tool that connects to things (devices) and runs custom 
 
 Most of the solutions focus on connecting devices that use different frameworks to a single unified framework and its majorly for the properties of the device. To perform automation, we need to write multiple if - else statements to cover all the scenarios that are possible. This is a cumbersome and inefficient process and it also doesn't take into account the environment in which the devices are setup. To tackle this problem, people have started to look into integrating AI with IOT to create an AI Planner.
 
-The AI Planner takes the data from the device and the actions it can perform, and returns a sequence of actions that should be performed to reach a desirable state.
+The AI Planner takes the data from the device and the actions it can perform and the effects on its environment, and returns a sequence of actions that should be performed to reach a desirable state.
 
 Some AI Planner papers - 
 
   - AI Planning-Based Service Modeling for the Internet of Things By Quentin Bahers -  https://uu.diva-portal.org/smash/get/diva2:792338/FULLTEXT01.pdf
   - Collaborative Decision Making in IoT Network forSustainable Smart Cities: An Artificial Intelligence Planning Method Based Solution - https://www.warse.org/IJATCSE/static/pdf/file/ijatcse041042021.pdf
+
+## Problem with AI Planners :
+
+AI planners require the input to be in a specific format that provides information about the devices, actions and the affects the actions have on the environment. However obtaining the effects is a difficult task as devices don't come with the information of how its changes will affect the environment or influence other devices.
+
+To solve this problem we look at 2 approaches that a device manager/developer can take.
+
+### [Anomaly Detection](https://www.sciencedirect.com/science/article/pii/S2542660522000622) :
+
+Here we look to analyse the data received from multiple devices in the environment and run some ML algorithms (described in the paper attached) to determine a common safe state (range of values for which the devices are operating normally).
+
+Once this is determined, we can use this information to detect any anomalies in the devices and the actions will be to bring the system back to the normal state. The key here is that through analysis of data, we are able to determine what is a normal state and when its deviating.
+
+### Transformer Based Approach : 
+
+We found that a generalized approach of determining affects of actions is very complex and difficult. Hence, we look at devices that belong to a specific domain (Smart Homes, Smart City, Smart Waste Management, etc).
+
+So if we take the case of Smart Homes, we can define the set of devices that will belong to this system, then for each device we can define a common data format that provides actions, properties and events , along with a brief description of what they do. (This can be extracted from schema.org). Example of this is in [Recommended Format](/sentences.json).
+
+Using this information, we can run a transformer model that is pretrained on the vocabulary of the devices (as in domain specific) then run a similarity score on the embeddings of the descriptions provided, this will help in identifying the relation between 2 devices and indicate whether an acion performed by a device will affect another device (can be quantified using similarity score)
+
+This will help a develop by providing hints on the affects that the devices can have and the domain expert can then write some automation code . This avoids the need to surf through a large collection of devices as the [model](/SentenceTransformer (3).ipynb) above will provide information on possible relations. 
+
