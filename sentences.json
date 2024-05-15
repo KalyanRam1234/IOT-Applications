@@ -1,0 +1,182 @@
+{
+    "0": {
+      "@context": "https://schema.org/",
+      "@type": "Lighting",
+      "properties": {
+        "color": {
+          "@type": "Text",
+          "description": "Represents the current color of the light."
+        },
+        "brightness": {
+          "@type": "Integer",
+          "description": "Denotes the intensity of the light emitted."
+        },
+        "powerState": {
+          "@type": "Text",
+          "description": "Indicates whether the light is turned on or off."
+        }
+      },
+      "actions": {
+        "setColor": {
+          "@type": "SetAction",
+          "description": "Sets the color of the light."
+        },
+        "adjustBrightness": {
+          "@type": "AdjustAction",
+          "description": "Adjusts the brightness level of the light."
+        },
+        "turnOnOff": {
+          "@type": "ToggleAction",
+          "description": "Turns the light on or off."
+        }
+      },
+      "events": {
+        "colorChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the color of the light is changed."
+        },
+        "brightnessChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the brightness level of the light is adjusted."
+        },
+        "powerStateChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the power state of the light is changed."
+        }
+      }
+    },
+    "1": {
+      "@context": "https://schema.org/",
+      "@type": "Thermostat",
+      "properties": {
+        "temperature": {
+          "@type": "Number",
+          "description": "Represents the current temperature reading."
+        },
+        "mode": {
+          "@type": "Text",
+          "description": "Denotes the operational mode of the thermostat (cooling, heating, etc.)."
+        },
+        "setpoint": {
+          "@type": "Number",
+          "description": "Indicates the desired temperature set by the user."
+        }
+      },
+      "actions": {
+        "setTemperature": {
+          "@type": "SetAction",
+          "description": "Sets the desired temperature."
+        },
+        "setMode": {
+          "@type": "SetAction",
+          "description": "Sets the operational mode of the thermostat."
+        }
+      },
+      "events": {
+        "temperatureChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the temperature reading changes."
+        },
+        "modeChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the operational mode of the thermostat changes."
+        },
+        "setpointChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the desired temperature setpoint is adjusted."
+        }
+      }
+    },
+    "2": {
+      "@context": "https://schema.org/",
+      "@type": "TV",
+      "properties": {
+        "channel": {
+          "@type": "Text",
+          "description": "Represents the currently tuned channel."
+        },
+        "volume": {
+          "@type": "Integer",
+          "description": "Denotes the current volume level."
+        },
+        "powerState": {
+          "@type": "Text",
+          "description": "Indicates whether the TV is turned on or off."
+        }
+      },
+      "actions": {
+        "changeChannel": {
+          "@type": "UpdateAction",
+          "description": "Changes the channel of the TV."
+        },
+        "adjustVolume": {
+          "@type": "AdjustAction",
+          "description": "Adjusts the volume level of the TV."
+        },
+        "turnOnOff": {
+          "@type": "ToggleAction",
+          "description": "Turns the TV on or off."
+        }
+      },
+      "events": {
+        "channelChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the channel of the TV is changed."
+        },
+        "volumeChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the volume level of the TV is adjusted."
+        },
+        "powerStateChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the power state of the TV is changed."
+        }
+      }
+    },
+    "3": {
+      "@context": "https://schema.org/",
+      "@type": "Blinds",
+      "properties": {
+        "position": {
+          "@type": "Text",
+          "description": "Represents the current position of the blinds (open, closed, partially open, etc.)."
+        },
+        "orientation": {
+          "@type": "Integer",
+          "description": "Denotes the angle of the blinds slats (if applicable)."
+        },
+        "powerState": {
+          "@type": "Text",
+          "description": "Indicates whether the blinds are in operation or not."
+        }
+      },
+      "actions": {
+        "setPosition": {
+          "@type": "SetAction",
+          "description": "Sets the position of the blinds."
+        },
+        "adjustOrientation": {
+          "@type": "AdjustAction",
+          "description": "Adjusts the orientation of the blinds slats."
+        },
+        "openClose": {
+          "@type": "ToggleAction",
+          "description": "Opens or closes the blinds."
+        }
+      },
+      "events": {
+        "positionChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the position of the blinds changes."
+        },
+        "orientationChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the orientation of the blinds slats is adjusted."
+        },
+        "powerStateChanged": {
+          "@type": "PropertyChanged",
+          "description": "Triggered when the power state of the blinds is changed."
+        }
+      }
+    }
+  }
